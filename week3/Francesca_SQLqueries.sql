@@ -54,7 +54,7 @@ LIMIT 5
 -- Note: There shouldn't be a table name order, since order is reserved from the ORDER BY clause.
 -- You have to use backticks to escape the order table name.
 select distinct k_symbol from `order`
-
+where k_symbol<>''
 
 -- Query 9
 -- In the order table, what are the order_ids of the client with the account_id 34?
@@ -65,6 +65,12 @@ select order_id from `order` where account_id in (34)
 -- In the order table, which account_ids were responsible for orders between order_id 29540 and order_id 29560 (inclusive)?
 select account_id from `order` where order_id IN (29540, 29560) or order_id>29540 and order_id<29560
 group by account_id
+
+
+-- Query 10
+-- second solution
+select distinct(account_id) from `order` where order_id IN (29540, 29560) or order_id>29540 and order_id<29560
+
 
 
 -- Query 11

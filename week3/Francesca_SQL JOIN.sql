@@ -4,18 +4,20 @@ use sakila;
 
 select * from film;
 
-select COUNT(actor_id), first_name, last_name from actor 
-inner join first_actor on actor.actor_id = first_actor.actor_id
-order by first_actor.actor_id desc limit 1;
+select first_name, last_name, COUNT(*) as 'total_acted' from film_actor 
+inner join actor using(actor_id)
+group by actor_id
+order by total_acted desc limit 1;
 
 
 -- 2 Most active customer (the customer that has rented the most number of films)
 
 select * from customer;
 
-select count(*), customer_id, first_name, last_name from customer 
+select customer_id, first_name, last_name, count(*) as 'total_rent' from customer 
 inner join rental using(customer_id) 
-order by first_name desc limit 1;
+group by customer_id
+order by total_rent desc limit 2;
 
 
 -- 3 List number of films per category.

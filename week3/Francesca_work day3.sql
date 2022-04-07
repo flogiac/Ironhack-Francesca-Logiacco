@@ -47,6 +47,11 @@ where title = "Alone Trip"
 ));
 
 
+-- NOTE: to select the full title of the film in a folder from a part of the title:
+
+select distinct title
+from film where title like 'alo%';
+
 
 -- 4. Sales have been lagging among young families, and you wish to target all family movies for a promotion.
 -- Identify all movies categorized as family films.
@@ -128,28 +133,32 @@ order by count(*) desc limit 1
 -- NOTE: to merge subqueries with inner join put =
 
 
-
 -- 7. Films rented by most profitable customer. 
 -- You can use the customer table and payment table to find the most profitable customer ie the customer that 
 -- has made the largest sum of payments
 
 select title from film where film_id in(
-select film_id from 
+select film_id from inventory
+where store_id in (
+select store_id from payment
+where customer_id = 
+(select customer_id from customer 
+inner join rental using(customer_id) 
+group by customer_id
+order by count(*) desc limit 1
+)));
+
+
+
+-- NOTE: before you wrote the following to identify the most profitable customer:
 (select customer_id, first_name, last_name, count(*) as 'total_rent' from customer 
 inner join rental using(customer_id) 
 group by customer_id
-order by total_rent desc limit 1
-);
-
-
-select title from film where film_id in (
-select film_id from film_actor 
-where actor_id = 
-(select actor_id from film_actor 
-inner join actor using(actor_id)
-group by actor_id
 order by count(*) desc limit 1
-));
+);
+ -- and after you delete/modified parts as shown above.
+
 
 
 -- 8. Customers who spent more than the average payments.
+

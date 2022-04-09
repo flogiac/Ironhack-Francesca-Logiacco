@@ -2847,8 +2847,8 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.01as46a0lzyuin178qihu1xt2exj].[Longitude (generated)]' field-type='quantitative' max='-10199235.799955517' min='-11768182.323889717' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.01as46a0lzyuin178qihu1xt2exj].[Latitude (generated)]' field-type='quantitative' max='6085124.179184366' min='3749333.0017085532' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.01as46a0lzyuin178qihu1xt2exj].[Longitude (generated)]' field-type='quantitative' max='-7845816.0140542164' min='-14121602.109791018' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.01as46a0lzyuin178qihu1xt2exj].[Latitude (generated)]' field-type='quantitative' max='9588810.9453980848' min='245646.23549483391' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='map'>
             <format attr='washout' value='0.0' />
@@ -3592,7 +3592,7 @@
           <zoom type='fit-width' />
         </viewpoint>
       </viewpoints>
-      <active id='32' />
+      <active id='-1' />
       <device-preview mobileapp-chrome-visible='false' visible='true'>
         <device is-portrait='false' name='Generic Desktop Monitor' type='Desktop' />
       </device-preview>

@@ -20,11 +20,29 @@ group by last_name having count(last_name) = 1;
 select last_name from actor 
 group by last_name having count(last_name) > 1;
 
+
 -- 3. Using the rental table, find out how many rentals were processed by each employee.
 
-select first_name, second_name, count(staff_id) from rental
+select count(rental_id) as number_rentals, first_name, last_name from rental
 inner join staff using (staff_id)
 group by staff_id;
+
+
+-- 4. Using the film table, find out how many films there are of each rating.
+
+select rating, count(film_id) from film
+group by rating;
+
+
+-- 5. What is the mean length of the film for each rating type. Round off the average lengths to two decimal places
+
+select rating, count(film_id), round(avg(length), 2) from film
+group by rating; 
+
+-- 6. Which kind of movies (rating) have a mean duration of more than two hours?
+
+select rating from film
+group by rating having avg(length) > 120; 
 
 
 

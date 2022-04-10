@@ -2489,11 +2489,6 @@
               <bucket>11395.439400000005</bucket>
             </map>
           </encoding>
-          <encoding attr='color' field='[none:Country:nk]' type='palette'>
-            <map to='#f64971'>
-              <bucket>&quot;United States&quot;</bucket>
-            </map>
-          </encoding>
           <encoding attr='color' field='[none:Region (Orders):nk]' type='palette'>
             <map to='#7c4d79'>
               <bucket>&quot;Central&quot;</bucket>
@@ -2511,6 +2506,11 @@
           <encoding attr='color' field='[none:Segment:nk]' type='palette'>
             <map to='#c46487'>
               <bucket>&quot;Corporate&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Country:nk]' type='palette'>
+            <map to='#f64971'>
+              <bucket>&quot;United States&quot;</bucket>
             </map>
           </encoding>
         </style-rule>
@@ -2846,8 +2846,8 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.01as46a0lzyuin178qihu1xt2exj].[Longitude (generated)]' field-type='quantitative' max='-7845816.0140542164' min='-14121602.109791018' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.01as46a0lzyuin178qihu1xt2exj].[Latitude (generated)]' field-type='quantitative' max='9588810.9453980848' min='245646.23549483391' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.01as46a0lzyuin178qihu1xt2exj].[Longitude (generated)]' field-type='quantitative' max='-8578102.7440171465' min='-12606526.116764264' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.01as46a0lzyuin178qihu1xt2exj].[Latitude (generated)]' field-type='quantitative' max='6867878.5420501679' min='214190.6451092909' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='map'>
             <format attr='washout' value='0.0' />
@@ -3302,8 +3302,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='2100' minheight='2100' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='52' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98546' id='51' param='vert' type-v2='layout-flow' w='98400' x='800' y='727'>
+            <zone h='100000' id='54' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98546' id='53' param='vert' type-v2='layout-flow' w='98400' x='800' y='727'>
                 <zone fixed-size='266' forceUpdate='true' h='24909' id='45' is-centered='0' is-fixed='true' is-scaled='1' param='/Users/francescalogiacco/Desktop/Ironhack-Francesca-Logiacco/week3/Francesca_Tablau work/KPI2.jpg' type-v2='bitmap' w='79700' x='800' y='727'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />

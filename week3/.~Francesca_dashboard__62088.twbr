@@ -3245,7 +3245,7 @@
     </worksheet>
   </worksheets>
   <dashboards>
-    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Dashboard 1'>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='FL_Dashborad'>
       <style />
       <size maxheight='1100' maxwidth='1000' minheight='1100' minwidth='1000' sizing-mode='fixed' />
       <zones>
@@ -3614,7 +3614,7 @@
       </cards>
       <simple-id uuid='{4D3C4885-CE00-4063-9C4A-331DDEBC1D4A}' />
     </window>
-    <window class='dashboard' maximized='true' name='Dashboard 1'>
+    <window class='dashboard' maximized='true' name='FL_Dashborad'>
       <viewpoints>
         <viewpoint name='Costumer'>
           <zoom type='fit-width' />
